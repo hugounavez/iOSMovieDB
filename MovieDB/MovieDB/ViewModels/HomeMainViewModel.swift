@@ -8,11 +8,14 @@
 
 import Foundation
 import RxSwift
+import Alamofire
 
 class HomeMainViewModel: NSObject{
     
     // Observable variables
-    var movies : Variable<[String]> = Variable(["test"])
-    
+    var movies : Variable<[Movie]> = Variable([])
+    // Network layer
+   
+   
     
 }

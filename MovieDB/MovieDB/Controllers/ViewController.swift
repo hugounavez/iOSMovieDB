@@ -10,6 +10,8 @@ import UIKit
 import SnapKit
 import RxCocoa
 import RxSwift
+import Alamofire
+
 
 class ViewController: UIViewController, UICollectionViewDelegate {
 
@@ -19,20 +21,12 @@ class ViewController: UIViewController, UICollectionViewDelegate {
     lazy var viewModel : HomeMainViewModel = {
         return HomeMainViewModel()
     }()
-    
-    let t : UIButton =
-    {
-        let t = UIButton()
-        t.translatesAutoresizingMaskIntoConstraints = false
-        t.setTitle("Marico el que lo lea", for: .normal)
-        return t
-        
-    }()
-    
+
     let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+  
         self.view.backgroundColor = .white
         
         self.view.addSubview(self.mainView)
@@ -47,6 +41,15 @@ class ViewController: UIViewController, UICollectionViewDelegate {
         
         self.mainView.setupLayout()
         self.bindViewElements()
+        
+        
+        
+        let m = MyService()
+        m.getMovieList(category: "popularity.desc") { (response) in
+            print(response)
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,7 +61,7 @@ class ViewController: UIViewController, UICollectionViewDelegate {
         self.viewModel.movies.asObservable().bind(to: self.mainView.collectionView.rx.items(cellIdentifier: "HomeMainViewCell")){  row, model, cell in
             if let movieCollectionCell = cell as? HomeMainViewCell{
                 movieCollectionCell.setupLayout()
-                movieCollectionCell.title.text = "marico"
+                movieCollectionCell.title.text = "mmm"
                 
             }
             
