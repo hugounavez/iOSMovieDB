@@ -81,15 +81,14 @@ class HomeMainView: UIView {
         self.collectionView.snp.makeConstraints { (make) in
             make.centerX.bottom.equalTo(self)
             make.width.equalTo(self)
-            make.top.equalTo(self.segmentedControl.snp.bottom)
+            make.top.equalTo(self.segmentedControl.snp.bottom).offset(0.5)
         }
-        
-        self.collectionView.backgroundColor = .lightGray
         
         self.layoutIfNeeded()
         self.collectionViewFlowLayout.itemSize = CGSize(width: self.frame.width, height: 90)
         self.collectionView.collectionViewLayout = self.collectionViewFlowLayout
         
+        self.collectionView.backgroundColor = .white
         
     }
     

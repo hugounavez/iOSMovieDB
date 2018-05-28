@@ -42,7 +42,7 @@ class ViewController: UIViewController, UICollectionViewDelegate {
         }
         
         self.mainView.collectionView.register(HomeMainViewCell.self, forCellWithReuseIdentifier: "HomeMainViewCell")
-        
+     
         self.mainView.collectionView.delegate = self
         
         self.mainView.setupLayout()
@@ -57,10 +57,17 @@ class ViewController: UIViewController, UICollectionViewDelegate {
     func bindViewElements(){
         self.viewModel.movies.asObservable().bind(to: self.mainView.collectionView.rx.items(cellIdentifier: "HomeMainViewCell")){  row, model, cell in
             if let movieCollectionCell = cell as? HomeMainViewCell{
-                movieCollectionCell.backgroundColor = .red
+                movieCollectionCell.setupLayout()
+                movieCollectionCell.title.text = "marico"
+                
             }
             
         }.disposed(by: self.disposeBag)
+        
+   
+ 
+        
+        
         
     }
     

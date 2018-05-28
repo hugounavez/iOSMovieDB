@@ -19,6 +19,7 @@
 		6307952620BB580B00252487 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6307952520BB580B00252487 /* Movies.swift */; };
 		6307952920BB583000252487 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6307952820BB583000252487 /* JsonHelper.swift */; };
 		631F1C2C96FB62662B566D14 /* Pods_MovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3DD865A4C9B76939E7A321D /* Pods_MovieDB.framework */; };
+		63C5AEC420BB6DA80047D58C /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C5AEC320BB6DA80047D58C /* CustomLabel.swift */; };
 		B6951F3589A95B90CBA7F2DB /* Pods_MovieDBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F003A00856B6C55E939DC4DC /* Pods_MovieDBTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		6307952320BB57AA00252487 /* HomeMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainViewModel.swift; sourceTree = "<group>"; };
 		6307952520BB580B00252487 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		6307952820BB583000252487 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
+		63C5AEC320BB6DA80047D58C /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		F003A00856B6C55E939DC4DC /* Pods_MovieDBTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieDBTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DD865A4C9B76939E7A321D /* Pods_MovieDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				6307952820BB583000252487 /* JsonHelper.swift */,
+				63C5AEC320BB6DA80047D58C /* CustomLabel.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6307952620BB580B00252487 /* Movies.swift in Sources */,
+				63C5AEC420BB6DA80047D58C /* CustomLabel.swift in Sources */,
 				6307952420BB57AA00252487 /* HomeMainViewModel.swift in Sources */,
 				630794FA20BAE05B00252487 /* ViewController.swift in Sources */,
 				6307950020BAE05B00252487 /* MovieDB.xcdatamodeld in Sources */,
